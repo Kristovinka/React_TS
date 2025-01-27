@@ -1,8 +1,9 @@
-import './App.css'
+import GlobalStyles from './styles/GlobalStyles'
 
 //lessons
 // import Lesson06 from './lessons/Lesson06/Lesson06'
-import Lesson07 from './lessons/Lesson07/Lesson07'
+// import Lesson07 from './lessons/Lesson07/Lesson07'
+import Lesson08 from './lessons/Lesson08/Lesson08'
 
 //homeworks
 
@@ -13,13 +14,16 @@ import Lesson07 from './lessons/Lesson07/Lesson07'
 function App() {
 
   return (
-    <div className='app'>
+    <>
+      <GlobalStyles />
       {/* Topic: TypeScript - Introduction */}
       {/* <Lesson06/> */}
       {/* <Consultation03/> */}
       {/* Topic: TypeScript - Object types, enum */}
-      <Lesson07 />
-    </div>
+      {/* <Lesson07 /> */}
+      {/* Topic: Styling components */}
+      <Lesson08 />
+    </>
   )
 }
 
