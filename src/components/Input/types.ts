@@ -1,7 +1,7 @@
 export interface InputProps {
     name: string;
     type?: string;
-    placeholder?: string| undefined;
+    placeholder?: string;
     label?: string;
     id: string;
   }
