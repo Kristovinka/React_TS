@@ -1,5 +1,5 @@
 import Button from "../Button/Button";
-import "./styles.css";
+import { MainCounter, Wrapper_Counter, Result_Container } from "./styles";
 import { useState } from "react";
 
 function Counter() {
@@ -18,15 +18,15 @@ function Counter() {
   };
 
   return (
-    <div className="counter-wrapper">
-      <div className="button-wrapper">
+    <MainCounter>
+      <Wrapper_Counter>
         <Button name="-" type="button" onClick={onMinusClick} />
-      </div>
-      <div className="result-container">{counter}</div>
-      <div className="button-wrapper">
+      </Wrapper_Counter>
+      <Result_Container>{counter}</Result_Container>
+      <Wrapper_Counter>
         <Button name="+" type="button" onClick={onPlusClick} />
-      </div>
-    </div>
+      </Wrapper_Counter>
+    </MainCounter>
   );
 }
 

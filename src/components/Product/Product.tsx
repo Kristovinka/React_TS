@@ -1,12 +1,12 @@
-import "./styles.css";
+import { MainProduct } from "./styles";
 import { ProductProps } from "./types";
 
 function Product({ name, price }: ProductProps) {
   return (
-    <div className="product">
+    <MainProduct>
       <h3>{name}</h3>
       <p>Цена: ${price.toFixed(2)}</p>
-    </div>
+    </MainProduct>
   );
 }
 

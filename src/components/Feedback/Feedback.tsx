@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css";
+import { MainFeedback, Button_wrapper, Button_reset, Info } from "./styles";
 import Button from "../Button/Button";
 
 function Feedback() {
@@ -20,23 +20,23 @@ function Feedback() {
   };
 
   return (
-    <div className="main-Feedback">
-      <div className="button-wrapper">
+    <MainFeedback>
+      <Button_wrapper>
         <Button name="Like" type="button" onClick={handleLike}></Button>{" "}
         <div className="info">{likes}</div>
-      </div>
-      <div className="button-wrapper">
+      </Button_wrapper>
+      <Button_wrapper>
         <Button name="Dislike" type="button" onClick={handleDislike}></Button>{" "}
-        <div className="info">{dislikes}</div>
-      </div>
-      <div className="button-reset">
+        <Info>{dislikes}</Info>
+      </Button_wrapper>
+      <Button_reset>
         <Button
           name="Reset Results"
           type="button"
           onClick={handleReset}
         ></Button>
-      </div>
-    </div>
+      </Button_reset>
+    </MainFeedback>
   );
 }
 
