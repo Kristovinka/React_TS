@@ -13,6 +13,10 @@ export const MainCounter = styled.div`
 `
 export const Wrapper_Counter = styled.div`
   width: 100px;
+  &:hover Button {
+  min-width: 200px;
+  background-color: rgb(25, 146, 252);
+}
 `
 
 export const Result_Container = styled.div`

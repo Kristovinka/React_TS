@@ -20,4 +20,7 @@ export const Input_element = styled.input`
   border: 1px solid black;
   border-radius: 4px;
   font-size: 16px;
+  &:hover placeholder {
+  color: #a19f9f;
+}
 `
