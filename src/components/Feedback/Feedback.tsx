@@ -1,42 +1,45 @@
-import React, { useState } from "react";
-import { MainFeedback, Button_wrapper, Button_reset, Info } from "./styles";
+import { useState } from "react";
+
 import Button from "../Button/Button";
+import {
+  FeedbackContainer,
+  FeedbackResultContainer,
+  LikeDislikeContainer,
+  Result
+} from "./styles";
 
 function Feedback() {
   const [likes, setLikes] = useState<number>(0);
-  const [dislikes, setDislikes] = useState<number>(0);
+  const [dislike, setDislike] = useState<number>(0);
+  console.log("render");
 
-  const handleLike = (): void => {
-    setLikes((countLike) => countLike + 1);
+  const addLike = (): void => {
+    setLikes((prevValue) => prevValue + 1);
   };
 
-  const handleDislike = (): void => {
-    setDislikes((countDislike) => countDislike + 1);
+  const addDislike = (): void => {
+    setDislike((prevValue) => prevValue + 1);
   };
 
-  const handleReset = (): void => {
+  const resetResults = (): void => {
     setLikes(0);
-    setDislikes(0);
+    setDislike(0);
   };
 
   return (
-    <MainFeedback>
-      <Button_wrapper>
-        <Button name="Like" type="button" onClick={handleLike}></Button>{" "}
-        <div className="info">{likes}</div>
-      </Button_wrapper>
-      <Button_wrapper>
-        <Button name="Dislike" type="button" onClick={handleDislike}></Button>{" "}
-        <Info>{dislikes}</Info>
-      </Button_wrapper>
-      <Button_reset>
-        <Button
-          name="Reset Results"
-          type="button"
-          onClick={handleReset}
-        ></Button>
-      </Button_reset>
-    </MainFeedback>
+    <FeedbackContainer>
+      <FeedbackResultContainer>
+        <LikeDislikeContainer>
+          <Result>{likes}</Result>
+          <Button name="LIKE" type="button" onClick={addLike} />
+        </LikeDislikeContainer>
+        <LikeDislikeContainer>
+          <Result>{dislike}</Result>
+          <Button name="DISLIKE" type="button" onClick={addDislike} />
+        </LikeDislikeContainer>
+      </FeedbackResultContainer>
+      <Button name="RESET RESULTS" type="button" onClick={resetResults} />
+    </FeedbackContainer>
   );
 }
 

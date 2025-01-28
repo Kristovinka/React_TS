@@ -1,7 +1,8 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
+// export const = styled.``
 
-export const MainAnimalCard = styled.div`
+export const AnimalCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +14,12 @@ export const MainAnimalCard = styled.div`
   border-radius: 6px;
   font-size: 24px;
 `
-export const Image = styled.img`
- width: 100px;
+
+export const CardImage = styled.img`
+  width: 100px;
 `
+export const Title = styled.h3``
+
+export const SpeciesBlock = styled.div``
+
+

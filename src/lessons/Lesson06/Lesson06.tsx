@@ -1,4 +1,4 @@
-import './styles.css'
+import { Lesson06Wrapper } from './styles';
 
 function Lesson06() {
   // Типы переменных указываются после названия через двоеточие
@@ -105,10 +105,10 @@ function Lesson06() {
   const example: (string | boolean)[] = ['fruit', true]
 
   return (
-    <div className="lesson06-wrapper">
+    <Lesson06Wrapper>
       Lesson06-TypeScript Introduction
       {fullName}
-    </div>
+    </Lesson06Wrapper>
   )
 }
 

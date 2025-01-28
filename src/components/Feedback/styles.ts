@@ -1,31 +1,34 @@
 import styled from "@emotion/styled";
 
-export const MainFeedback = styled.div`
+// export const = styled.``
+
+export const FeedbackContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-`;
-export const Button_wrapper = styled.div`
+  gap: 30px;
+  min-width: 800px;
+  padding: 20px;
+  background-color: rgb(129, 212, 212);
+`
+
+export const FeedbackResultContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  gap: 30px;
+  width: 100%;
+`
+
+export const LikeDislikeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
-  & :hover Button {
-    min-width: 200px;
-    background-color: rgb(25, 146, 252);
-  }
-`;
+  width: 100%;
+`
 
-export const Button_reset = styled.div`
-  min-width: 250px;
-  background-color: rgb(27, 111, 255);
-`;
+export const Result = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(17, 17, 70);
+`
 
-export const Info = styled.div`
-  padding: 10px;
-  width: 100px;
-  font-size: 20px;
-  color: brown;
-`;
+
