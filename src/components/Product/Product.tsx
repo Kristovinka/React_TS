@@ -1,12 +1,12 @@
-import "./styles.css";
+import { ProductName, ProductWrapper } from "./styles";
 import { ProductProps } from "./types";
 
-function Product({ name, price }: ProductProps) {
+function Product({ productName = "Unknown", productPrice }: ProductProps) {
   return (
-    <div className="product">
-      <h3>{name}</h3>
-      <p>Цена: ${price.toFixed(2)}</p>
-    </div>
+    <ProductWrapper>
+      <ProductName>{productName}</ProductName>
+      {productPrice !== undefined && <div>{productPrice} $</div>}
+    </ProductWrapper>
   );
 }
 

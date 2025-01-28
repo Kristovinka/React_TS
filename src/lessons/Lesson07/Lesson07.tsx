@@ -1,4 +1,4 @@
-import './styles.css'
+import { Lesson07Wrapper } from './styles';
 
 function Lesson07() {
   // --- Тип any - любой тип
@@ -158,9 +158,9 @@ function Lesson07() {
 
 
   return (
-    <div className="lesson07-wrapper">
+    <Lesson07Wrapper>
       TS-lesson07
-    </div>
+    </Lesson07Wrapper>
   )
 }
 
