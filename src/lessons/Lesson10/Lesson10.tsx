@@ -53,7 +53,7 @@ function Lesson10() {
     } catch (error: any) {
       setError(error.message)
     } finally {
-      setIsLoading(false)
+      const [error, setError] = useState<undefined | string>(undefined)
     }
   }
 
