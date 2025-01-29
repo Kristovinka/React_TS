@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Input from "../../components/Input/Input";
 import {
   HW09Wrapper,
@@ -10,7 +10,7 @@ import Button from "../../components/Button/Button";
 function Homework09() {
   const [Value1, setValue1] = useState<string>("");
   const [Value2, setValue2] = useState<string>("");
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState<boolean>(false);
 
   const onChangeValue1 = (event: ChangeEvent<HTMLInputElement>) => {
     setValue1(event.target.value);
@@ -21,7 +21,7 @@ function Homework09() {
   };
 
   const handleButtonClick = () => {
-    setShowResults(true); // Show results when button is clicked
+    setShowResults(true); 
   };
 
   return (
@@ -42,7 +42,7 @@ function Homework09() {
           placeholder="Enter your Value2"
           value={Value2}
           onChange={onChangeValue2}
-        />{" "}
+        />
         {showResults && (
           <ResultContainer>
             <Result>{Value1}</Result>
