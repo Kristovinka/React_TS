@@ -34,7 +34,7 @@ function Lesson11() {
     setCatFact([]);
   };
 
-//   useEffect(() => {fetchJokeData() }, []);
+  useEffect(() => {fetchJokeData() }, []);
 
   return (
     <Lesson11Wrapper>
