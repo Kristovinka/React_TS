@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, useEffect } from "react";
 import Input from "../../components/Input/Input";
 import Spinner from "../../components/Spinner/Spinner";
-import { HW10Wrapper, ErrorBlock, ResultBlock } from "./styles";
+import { HW10Wrapper, ErrorBlock, ResultBlock, ImageDog } from "./styles";
 import axios from "axios";
 
 function Homework10() {
@@ -35,13 +35,13 @@ function Homework10() {
     }
   };
 
-  useEffect(() => { fetchDog() }, [inputValue]);
+  useEffect(() => { inputValue && fetchDog() }, [inputValue]);
 
   return (
     <HW10Wrapper>
       <Input name="picture" value={inputValue} onChange={onChange}></Input>
       <Input name="picture2" value={inputValue2} onChange={onChange2}></Input>
-      {picture && <ResultBlock><img src={picture} alt="dog" /></ResultBlock>}
+      {picture && <ResultBlock><img src={picture} alt="dog" ></img></ResultBlock>}
       {isLoading && <Spinner />}
       {error && <ErrorBlock>{error}</ErrorBlock>}
     </HW10Wrapper>

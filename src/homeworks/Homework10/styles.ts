@@ -15,9 +15,6 @@ export const ResultBlock = styled.div`
   border-radius: 6px;
   font-size: 28px;
   font-weight: bold;
-  &:hover img{
-    width: 400px;
-  }
 `
 export const ErrorBlock = styled.div`
   width: 600px;
@@ -27,4 +24,8 @@ export const ErrorBlock = styled.div`
   color: #ffffff;
   font-size: 28px;
   font-weight: bold;
+`
+
+export const ImageDog = styled.image`
+ width: 400px;
 `
