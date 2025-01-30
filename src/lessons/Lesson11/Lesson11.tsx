@@ -15,7 +15,6 @@ function Lesson11() {
   const [catFact, setCatFact] = useState<string[]>([]);
   const [error, setError] = useState<undefined | string>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [catValue, setCatValue] = useState<string>("");
 
   const fetchJokeData = async () => {
     setError(undefined);
@@ -34,10 +33,6 @@ function Lesson11() {
   const delAllData = async () => {
     setCatFact([]);
   };
-
-  useEffect(() => {
-    catValue && fetchJokeData();
-  }, [catValue]);
 
 //   useEffect(() => {fetchJokeData() }, []);
 

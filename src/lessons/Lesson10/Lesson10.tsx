@@ -53,8 +53,8 @@ function Lesson10() {
     } catch (error: any) {
       setError(error.message)
     } finally {
-      const [error, setError] = useState<undefined | string>(undefined)
-    }
+      setIsLoading(false);  
+      }
   }
 
   //отправлять запрос при загрузке страницы

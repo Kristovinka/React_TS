@@ -26,6 +26,6 @@ export const ErrorBlock = styled.div`
   font-weight: bold;
 `
 
-export const ImageDog = styled.image`
+export const ImageDog = styled.img`
  width: 400px;
 `
