@@ -6,12 +6,13 @@ import GlobalStyles from './styles/GlobalStyles'
 // import Lesson08 from './lessons/Lesson08/Lesson08'
 // import Lesson09 from './lessons/Lesson09/Lesson09'
 // import Lesson10 from './lessons/Lesson10/Lesson10'
-import Lesson12 from 'lessons/Lesson12/Lesson12'
+//import Lesson12 from 'lessons/Lesson12/Lesson12'
 
 //homeworks
 // import Homework08 from './homeworks/Homework08/Homework08'
 // import Homework09 from './homeworks/Homework09/Homework09'
 // import Homework10 from './homeworks/Homework10/Homework10'
+import Homework12 from './homeworks/Homework12/Homework12'
 
 //consultations
 // import Consultation03 from './consultations/Consultation03/Consultation03'
@@ -39,7 +40,7 @@ function App() {
       {/* <Lesson10 /> */}
       {/* <Homework10 /> */}
       {/* --Topic: formik, yup */}
-      <Lesson12 />
+      <Homework12 />
     </>
   )
 }
