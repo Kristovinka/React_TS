@@ -7,5 +7,6 @@ export interface InputProps {
   label?: string,
   id?: string,
   value?: string,
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void,
+  error?: string
 }

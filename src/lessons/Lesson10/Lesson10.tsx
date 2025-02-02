@@ -1,9 +1,9 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 
-import Button from "components/Button/Button";
+// import Button from "../../components/Button/Button";
 import { ButtonWrapper, ErrorBlock, Lesson10Wrapper, ResultBlock } from "./styles";
-import Spinner from "components/Spinner/Spinner";
+import Spinner from "../../components/Spinner/Spinner";
 import Input from "components/Input/Input";
 
 function Lesson10() {
@@ -53,8 +53,8 @@ function Lesson10() {
     } catch (error: any) {
       setError(error.message)
     } finally {
-      setIsLoading(false);  
-      }
+      setIsLoading(false)
+    }
   }
 
   //отправлять запрос при загрузке страницы
