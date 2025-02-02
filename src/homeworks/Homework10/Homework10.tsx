@@ -41,7 +41,7 @@ function Homework10() {
     <HW10Wrapper>
       <Input name="picture" value={inputValue} onChange={onChange}></Input>
       <Input name="picture2" value={inputValue2} onChange={onChange2}></Input>
-      {picture && <ResultBlock><img src={picture} alt="dog" ></img></ResultBlock>}
+      {picture && <ResultBlock><ImageDog src={picture} alt="dog" ></ImageDog></ResultBlock>}
       {isLoading && <Spinner />}
       {error && <ErrorBlock>{error}</ErrorBlock>}
     </HW10Wrapper>
