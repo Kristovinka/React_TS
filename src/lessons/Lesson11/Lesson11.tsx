@@ -16,13 +16,13 @@ function Lesson11() {
   const [error, setError] = useState<undefined | string>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const fetchJokeData = async () => {
+  const fetchJokeData =  async () => {
     setError(undefined);
 
     try {
       setIsLoading(true);
       const result = await axios.get("https://catfact.ninja/fact");
-      setCatFact([...catFact, result.data.fact]);
+      setCatFact((prevState)=>[...prevState, result.data.fact]); 
     } catch (error: any) {
       setError(error.message);
     } finally {
@@ -30,7 +30,7 @@ function Lesson11() {
     }
   };
 
-  const delAllData = async () => {
+  const delAllData = () => {
     setCatFact([]);
   };
 
