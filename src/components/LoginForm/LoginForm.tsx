@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import { LoginFormContainer, Title, InputsContainer } from "./styles";
 import { LoginFormValues } from "./types";
+import { ChangeEvent } from "react";
 
 function LoginForm() {
   // const [email, setEmail] = useState<string>("");
@@ -26,6 +27,9 @@ function LoginForm() {
   //   console.log(password);
   // };
 
+  //минимум 8 символов, специальный символ и хотя бы одна заглавная буква
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
   //--- Создание валидационной схемы с помощью Yup
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -34,11 +38,14 @@ function LoginForm() {
       .max(20, 'Max 20 symbols')
       .min(10, 'Min 10 symbols')
       .typeError('Email must be string'),
-    password: Yup.number()
-      .required('Field password is required')
-      .typeError('Password must be number')
-      .test('Check min password length', 'Min 10 symbols', (value) => String(value).length >= 10)
-      .test('Check max password length', 'Max 20 symbols', (value) => String(value).length <= 20)
+    // password: Yup.number()
+    //   .required('Field password is required')
+    //   .typeError('Password must be number')
+    //   .test('Check min password length', 'Min 10 symbols', (value) => String(value).length >= 10)
+    //   .test('Check max password length', 'Max 20 symbols', (value) => String(value).length <= 20)
+    password: Yup.string()
+      .required('Required')
+      .matches(passwordRegex, 'Password must be at least 8 characters long, include uppercase, lowercase and special character')
   })
 
   //--- Настройка формы. useFormik, как аргумент принимает объект настройки, для определенной формы
@@ -61,6 +68,11 @@ function LoginForm() {
   })
 
   console.log(formik);
+
+  const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
+    formik.setFieldValue('password', event.target.value)
+    formik.validateField('password')
+  }
 
 
   return (
@@ -87,7 +99,8 @@ function LoginForm() {
           name="password"
           label="Password*"
           value={formik.values.password}
-          onChange={formik.handleChange}
+          // onChange={formik.handleChange}
+          onChange={handlePasswordChange}
           placeholder="Enter your password"
           error={formik.errors.password}
         />
