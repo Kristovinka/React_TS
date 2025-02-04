@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const GooglePage = styled.div`
+export const AmazonPage = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;

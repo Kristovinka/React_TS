@@ -1,19 +1,19 @@
 import styled from "@emotion/styled";
 
-export const Page = styled.div`
+export const FacebookPage = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex: 1;
-  gap: 30px;
   padding: 20px;
   font-size: 30px;
   `
 
-export const Title = styled.div`
+export const Title = styled.h2`
  font-size: 36px;
- font-weight: bold;
+ color: blueviolet;
 `
-export const Info = styled.div`
+
+export const Description = styled.div`
+  color: burlywood;
 `
+

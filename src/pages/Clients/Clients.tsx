@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom"
-import { Title, ClientsPage } from "./styles"
+import { ClientsPage, Title, StyledLink } from "./styles"
 
 function Clients() {
-
-
   return (
     <ClientsPage>
-      <Title>Select company</Title>
-      <Link to='facebook'>Go to Facebook</Link>
-      <Link to='telegram'>Go to Telegram</Link>
-      <Link to='google'>Go to Google</Link>
+      <Title>Clients page</Title>
+      <StyledLink to='amazon'>Amazon</StyledLink>
+      <StyledLink to='facebook'>Facebook</StyledLink>
+      <StyledLink to='google'>Google</StyledLink>
     </ClientsPage>
   )
 }
 
-export default Clients 
+export default Clients
