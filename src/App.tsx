@@ -28,6 +28,7 @@ import Clients from 'pages/Clients/Clients'
 import Facebook from 'pages/Clients/components/Facebook/Facebook'
 import Google from 'pages/Clients/components/Google/Google'
 import Amazon from 'pages/Clients/components/Amazon/Amazon'
+import Homework14 from 'homeworks/Homework14/Homework14'
 
 
 
@@ -58,6 +59,7 @@ function App() {
           <Route path='/clients/amazon' element={<Amazon />} />
           {/* --Topic: useContext */}
           <Route path='/lesson14' element={<Lesson14 />} />
+          <Route path='/homework14' element={<Homework14 />} />
           {/* Route * - этот route показывает контент, если маршрута не существует в перечисленных выше */}
           <Route path='*' element='Page not found' />
         </Routes>
