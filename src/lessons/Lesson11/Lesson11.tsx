@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
+import { v4 } from "uuid";
 
 import Button from "../../components/Button/Button";
 import {
@@ -15,6 +16,10 @@ function Lesson11() {
   const [catFact, setCatFact] = useState<string[]>([]);
   const [error, setError] = useState<undefined | string>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const catFacts = catFact.map((fact) => (
+    <ResultBlock key={v4()}>{fact}</ResultBlock>
+  ))
 
   const fetchJokeData =  async () => {
     setError(undefined);
@@ -45,9 +50,7 @@ function Lesson11() {
       {error && <ErrorBlock>{error}</ErrorBlock>}
       {catFact.length > 0 && (
         <DataWrapper>
-          {catFact.map((fact, index) => (
-            <ResultBlock key={index}>{fact}</ResultBlock>
-          ))}
+          {catFacts}
         </DataWrapper>
       )}
       {catFact.length > 0 && (

@@ -15,7 +15,7 @@ import Home from 'pages/Home/Home'
 import About from 'pages/About/About'
 import Users from 'pages/Users/Users'
 import User from 'pages/Users/components/User/User'
-import Lesson14 from 'lessons/Lesson14/Lesson14'
+import Lesson11 from 'lessons/Lesson11/Lesson11'
 
 
 
@@ -58,7 +58,7 @@ function App() {
           <Route path='/clients/google' element={<Google />} />
           <Route path='/clients/amazon' element={<Amazon />} />
           {/* --Topic: useContext */}
-          <Route path='/lesson14' element={<Lesson14 />} />
+          <Route path='/lesson11' element={<Lesson11/>} />
           <Route path='/homework14' element={<Homework14 />} />
           {/* Route * - этот route показывает контент, если маршрута не существует в перечисленных выше */}
           <Route path='*' element='Page not found' />

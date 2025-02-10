@@ -49,11 +49,11 @@ function Layout({ children }: LayoutProps) {
             Clients
           </StyledNavLink>
           <StyledNavLink
-            to='/lesson14'
+            to='/lesson11'
             style={
               ({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })
             }>
-            Lesson 14
+            Lesson 11
           </StyledNavLink>
           <StyledNavLink
             to='/homework14'
